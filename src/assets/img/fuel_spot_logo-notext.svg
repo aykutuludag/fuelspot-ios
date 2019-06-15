@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="771" height="802" fill="none">
+  <path fill="url(#paint0_radial)" fill-rule="evenodd" d="M585.57 31.1191H185.15C82.89 31.1191 0 114.009 0 216.269v400.44c0 102.26 82.89 185.14 185.15 185.14h400.43c102.26 0 185.15-82.88 185.15-185.14v-400.44c-.01-102.26-82.9-185.1499-185.16-185.1499z" clip-rule="evenodd"/>
+  <path fill="url(#paint1_radial)" fill-rule="evenodd" d="M585.57 4.07031H185.15C82.89 4.07031 0 86.9603 0 189.22v400.44C0 691.92 82.89 774.8 185.15 774.8h400.43c102.26 0 185.15-82.88 185.15-185.14V189.22C770.72 86.9703 687.83 4.07031 585.57 4.07031z" clip-rule="evenodd"/>
+  <path fill="url(#pattern0)" d="M288.872 245.027H711.12v533.812H288.872z"/>
+  <path fill="#2B2B2B" fill-rule="evenodd" d="M489.56 734.06h20.85c8.83-1.43 17.77-2.38 26.47-4.35 66.09-14.97 116.22-67.94 127.39-134.5 7.17-42.71-1.17-82.36-24.96-118.48-38.12-57.87-76.67-115.47-114.95-173.24-4.35-6.54-9.81-11.37-17.51-13.31-11.8-2.97-23.16 1.43-30.2 11.92-14.61 21.74-29.09 43.56-43.62 65.36-21.84 32.75-43.66 65.5-65.5 98.24-13.55 20.33-25.48 41.44-30.24 65.76-12.3 62.91 4.87 116.62 51.89 160.11 27.19 25.16 60.01 38.67 97.03 41.74 1.12.1 2.23.49 3.35.75z" clip-rule="evenodd"/>
+  <path fill="url(#pattern1)" d="M59.3796 0h422.248v533.812H59.3796z"/>
+  <path fill="#fff" fill-rule="evenodd" d="M107.82 247.421c4.74 24.31 16.69 45.43 30.24 65.76 21.84 32.74 43.66 65.5 65.48 98.24 14.53 21.78 29.01 43.62 43.62 65.36 7.04 10.49 18.42 14.9 30.2 11.92 7.69-1.93 13.16-6.77 17.51-13.31 38.29-57.76 76.83-115.36 114.95-173.25 23.81-36.1 32.14-75.75 24.96-118.48-11.15-66.56-61.3-119.5105-127.37-134.5005-8.72-1.98-17.66-2.93-26.48-4.35h-20.85c-1.12.26-2.21.64-3.35.74-37 3.08-69.83 16.59-97.04 41.75-47 43.4905-64.1899 97.2005-51.87 160.1205zm162.8-117.07c45 0 81.48 36.49 81.48 81.49 0 45-36.48 81.48-81.48 81.48-45 0-81.48-36.48-81.48-81.48 0-44.99 36.48-81.49 81.48-81.49z" clip-rule="evenodd"/>
+  <defs>
+    <pattern id="pattern0" width="1" height="1" patternContentUnits="objectBoundingBox">
+      <use xlink:href="#image0"/>
+    </pattern>
+    <pattern id="pattern1" width="1" height="1" patternContentUnits="objectBoundingBox">
+      <use xlink:href="#image1"/>
+    </pattern>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientTransform="translate(579.171 220.415) scale(849.709)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#73491D"/>
+      <stop offset="1" stop-color="#721518"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientTransform="translate(579.171 193.373) scale(849.709)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F49C44"/>
+      <stop offset="1" stop-color="#E52336"/>
+    </radialGradient>
+  </defs>
+</svg>

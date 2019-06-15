@@ -1,0 +1,74 @@
+.home {
+
+	.col--sorting {
+		border-bottom: 2px solid $blue-grey-lighten-5;
+		@include flexbox($justify: space-between);
+
+		a, span {
+			font-weight: 500;
+			color: $blue-grey-base;
+		}
+
+		select {
+			border: none;
+			border-radius: 3px;
+			color: $blue-base;
+			background: white;
+			cursor: pointer;
+
+			option {
+				color: $blue-grey-darken-2;
+				padding: .5rem .75rem;
+				transition:
+					background $transition,
+					color $transition;
+
+				&:hover {
+					background: $red-base;
+					color: white;
+				}
+			}
+		}
+	}
+
+	.station {
+		padding-top: 2rem;
+
+		&:not(:last-child) {
+			border-bottom: 2px solid mix($blue-grey-lighten-5, white, 45%);
+		}
+
+		&__logo {
+			position: absolute;
+			top: calc(1rem - 4px);
+			left: 1rem;
+			border: none;
+			border-radius: 1000px;
+			width: 32px;
+			height: 32px;
+			object-fit: contain;
+		}
+
+		&__name {
+			@include flexbox($justify: flex-start);
+			margin: 0;
+		}
+
+		&__verify {
+			font-size: 0.75rem;
+			color: $green-base;
+		}
+
+		&__address {
+			font-weight: 400;
+			font-size: 0.875rem;
+			letter-spacing: -0.006em;
+			color: $blue-grey-darken-2;
+		}
+
+		&__update {
+			font-size: 0.75rem;
+			color: $blue-grey-base;
+		}
+	}
+}

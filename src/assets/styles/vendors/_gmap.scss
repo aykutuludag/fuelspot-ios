@@ -1,0 +1,64 @@
+.google-map {
+	border-radius: 6px;
+	overflow: hidden;
+	height: 400px;
+
+	@include media-max {
+		height: 240px;
+	}
+
+	&__popover {
+		text-align: center;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 17px;
+
+		&__logo {
+			width: 48px;
+			height: 48px;
+			object-fit: contain;
+			object-position: center;
+			user-select: none;
+		}
+
+		&__price {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		&__button {
+			@include flexbox($display: inline-flex);
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: -0.006em;
+			margin-bottom: 0.25rem;
+
+			i {
+				font-size: 10px;
+				margin-top: -2px;
+			}
+		}
+	}
+
+	.gm-style .gm-style-iw-c {
+		border-radius: 3px !important;
+		box-shadow: 0 .125rem .1875rem rgba(0, 0, 0, .15) !important;
+		//
+		max-width: 200px !important;
+		max-height: 269px !important;
+	}
+
+	.gm-ui-hover-effect {
+		top: 0 !important;
+		right: 0 !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+
+		img {
+			width: 18px !important;
+			height: 18px !important;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+{
+	"name": "fuelspot-web",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint"
+	},
+	"dependencies": {
+		"axios": "^0.19.0",
+		"lodash": "^4.17.11",
+		"moment": "^2.24.0",
+		"register-service-worker": "^1.6.2",
+		"slugify": "^1.3.4",
+		"vee-validate": "^2.2.0",
+		"vue": "^2.6.9",
+		"vue-axios": "^2.1.4",
+		"vue-currency-input": "^1.3.2",
+		"vue-facebook-login-component": "^1.3.5",
+		"vue-google-charts": "^0.3.2",
+		"vue-google-oauth2": "^1.3.3",
+		"vue-js-modal": "^1.3.28",
+		"vue-meta": "^1.6.0",
+		"vue-moment": "^4.0.0",
+		"vue-router": "^3.0.1",
+		"vue-snotify": "^3.2.1",
+		"vue-social-sharing": "^2.4.3",
+		"vue-star-rating": "^1.6.1",
+		"vue-tippy": "^2.1.2",
+		"vue2-google-maps": "^0.10.6",
+		"vuejs-datepicker": "^1.5.4",
+		"vuex": "^3.0.1"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^3.5.1",
+		"@vue/cli-plugin-eslint": "^3.5.1",
+		"@vue/cli-plugin-pwa": "^3.5.1",
+		"@vue/cli-service": "^3.7.0",
+		"@vue/eslint-config-prettier": "^4.0.1",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.15.1",
+		"eslint-plugin-vue": "^5.2.2",
+		"glob-all": "^3.1.0",
+		"node-sass": "^4.12.0",
+		"postcss-pxtorem": "^4.0.1",
+		"postcss-url": "^8.0.0",
+		"purgecss-webpack-plugin": "^1.4.0",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.6.9"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/strongly-recommended",
+			"@vue/prettier"
+		],
+		"rules": {
+			"no-console": 2
+		},
+		"parserOptions": {
+			"parser": "babel-eslint"
+		}
+	},
+	"postcss": {
+		"plugins": {
+			"postcss-pxtorem": {
+				"rootValue": 16,
+				"unitPrecision": 5,
+				"propList": [
+					"font",
+					"font-size",
+					"line-height",
+					"padding*",
+					"margin*"
+				],
+				"selectorBlackList": [
+					"body",
+					".card__header",
+					".station-page .card .station__logo"
+				],
+				"replace": true,
+				"mediaQuery": false,
+				"minPixelValue": 12
+			},
+			"postcss-url": {
+				"url": "inline"
+			},
+			"autoprefixer": {}
+		}
+	},
+	"browserslist": [
+		"last 2 versions",
+		">= 0.1% and not ie <= 8"
+	]
+}

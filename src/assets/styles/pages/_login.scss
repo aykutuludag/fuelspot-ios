@@ -1,0 +1,119 @@
+.intro {
+    min-height: 100vh;
+	@include mx-auto($max-width: 260px);
+    @include flexbox($direction: column);
+
+    &__heading {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+		position: relative;
+
+		.copyright {
+			font-size: 12px;
+			position: absolute;
+			top: -4px;
+			right: -8px;
+			user-select: none;
+
+			@include media-max {
+				right: 18px;
+			}
+		}
+    }
+
+    &__welcome {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.25rem;
+        line-height: normal;
+        margin-bottom: 3rem;
+        color: $blue-grey-darken-1;
+
+		&--super {
+			margin-bottom: 1.5rem;
+		}
+    }
+
+    .login {
+
+        p {
+			font-size: 1.125rem;
+			font-weight: 500;
+			color: $blue-grey-base;
+        }
+
+		&--social {
+			border: 1px solid $grey-lighten-1;
+			border-radius: 3px;
+			position: relative;
+
+			p {
+				width: 120px;
+				position: absolute;
+				background: white;
+				top: -12px;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			a {
+				text-decoration: none;
+				transition: transform $transition;
+
+				&:hover,
+				&:focus {
+					transform: translateY(-2px);
+				}
+			}
+
+			&--super {
+				margin-bottom: 1rem;
+			}
+		}
+
+		&--warn {
+			font-size: 10px;
+			font-weight: 500;
+			letter-spacing: 0.01em;
+			line-height: 14px;
+			width: 200px;
+			margin-bottom: 48px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&--station {
+
+			a {
+				color: $red-base;
+				font-size: 1rem;
+				font-weight: 500;
+
+				&:active {
+					color: $red-darken-1;
+				}
+			}
+
+			&__text {
+				font-size: 1rem !important;
+				color: $blue-grey-darken-4 !important;
+				font-weight: 400 !important;
+			}
+		}
+    }
+
+	a {
+		font-size: 0.75rem;
+		color: $blue-base;
+		text-decoration: none;
+
+		&:hover {
+			color: $blue-darken-2;
+		}
+	}
+
+	&--super {
+		@include mx-auto($max-width: 390px);
+	}
+}

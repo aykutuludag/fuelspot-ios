@@ -1,0 +1,315 @@
+.card {
+	overflow: hidden;
+	border-radius: 3px;
+	border-color: $grey-lighten-4;
+
+	&--station {
+		padding: 1rem;
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+
+		&__logo {
+			@include mm-scale(40px, 40px);
+			border: 2px solid;
+			border-radius: 1000px;
+			overflow: hidden;
+			box-sizing: content-box;
+			@include flexbox;
+
+			img {
+				width: 40px;
+				height: 40px;
+				display: flex;
+			}
+
+			@include media-min {
+				@include mm-scale(80px, 80px);
+
+				img {
+					width: 80px;
+					height: 80px;
+				}
+			}
+		}
+
+		&__info {
+			margin-left: 1rem;
+			padding-top: 0.25rem;
+			padding-left: .5rem;
+			width: 100%;
+			min-width: 0;
+			@extend .text-truncate;
+		}
+
+		&__name {
+			font-size: 1.375rem;
+			margin-bottom: 0.25rem;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+
+		&__lastUpdated {
+			font-size: 14px;
+			font-weight: 500;
+
+			i {
+				font-size: 12px;
+				font-weight: 900;
+			}
+		}
+
+		&__footer {
+			@include flexbox($align: flex-start, $justify: space-between);
+
+			@include media-min($lg) {
+				@include mx-auto($min-width: 874px, $max-width: 874px);
+			}
+
+			strong {
+				font-weight: 400;
+			}
+
+			b {
+				@extend .font-numeric;
+				font-weight: 562;
+			}
+		}
+	}
+
+	.station-page & {
+		position: relative;
+
+		a [class*="fa-"],
+		.btn [class*="fa-"] {
+			@include media-max {
+				font-size: 1.5rem;
+			}
+		}
+
+		@include media-max {
+			border: none;
+		}
+
+		@include media-min($md) {
+
+			a:not(:last-child) {
+				margin-right: 1rem;
+			}
+		}
+
+		.station {
+
+			&__logo {
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				display: none;
+
+				@include media-min {
+					width: 80px;
+					height: 80px;
+					top: 0.75rem;
+					left: 0.625rem;
+					display: inline-block;
+				}
+			}
+
+			&__name {
+				font-size: 1.75rem;
+				margin-bottom: 0;
+			}
+
+			&__id {
+				font-size: 1rem;
+				vertical-align: middle;
+			}
+
+			&__vicinity {
+				font-size: 1;
+				font-weight: 500;
+				color: $blue-grey-base;
+				margin-bottom: 0.25rem;
+
+				@include media-max {
+					width: 86%;
+				}
+			}
+		}
+
+		.card__header {
+			padding-left: 0;
+
+			@include media-min {
+				padding-left: 74px;
+			}
+		}
+
+		.card__body {
+			padding-left: 0;
+
+			@include media-min {
+				padding-left: 74px;
+				padding-right: 74px;
+			}
+
+			.heading {
+				font-size: 1.5rem;
+				margin: 2rem 0 1rem;
+				position: relative;
+				color: $blue-grey-darken-3;
+			}
+		}
+
+		.holder--button {
+			@include flexbox($justify: flex-start);
+			margin-bottom: 1rem;
+
+			@include media-max {
+				float: right;
+				margin-right: 0.25rem;
+			}
+		}
+	}
+
+	&--user {
+
+		&__image {
+			border: 1px solid $grey-lighten-4;
+			border-radius: 1000px;
+			width: 40px;
+			height: 40px;
+			margin-right: 1.25rem;
+			box-sizing: content-box;
+			overflow: hidden;
+			object-fit: cover;
+			object-position: center;
+
+			@include media-min($xl) {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 0;
+				left: -96px;
+			}
+		}
+
+		&__name {
+			font-size: 1.5rem;
+			font-weight: 400;
+			margin-bottom: 0.125rem;
+			@include flexbox($align: center, $justify: flex-start);
+
+			a {
+				@include flexbox;
+			}
+
+			i {
+				font-size: 1rem;
+			}
+		}
+
+		&__username {
+			font-size: 1rem;
+			font-weight: 500;
+		}
+
+		table {
+			margin-top: 1rem;
+
+			tr {
+
+				td {
+					padding-right: 0.25rem;
+					font-size: 14px;
+					font-weight: 500;
+					color: $blue-grey-darken-2;
+
+					&:nth-child(1) {
+						color: $blue-grey-lighten-1;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	&--news {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		margin-bottom: 1.5rem;
+		min-width: calc(50% - 2rem);
+		max-width: calc(50% - 2rem);
+		padding-bottom: 45px;
+
+		@include media-max($sm) {
+			margin-left: 0;
+			margin-right: 0;
+			min-width: 100%;
+			max-width: 100%;
+		}
+
+		&__image {
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+
+			@include media-max {
+				height: 160px;
+			}
+		}
+
+		&__title {
+			font-size: 1.5rem;
+		}
+
+		.btn {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+	}
+
+	&--my-station {
+		position: relative;
+
+		&__header {
+			@include flexbox($direction: column);
+			text-align: center;
+		}
+
+		.station {
+
+			&__logo {
+				border: 2px solid;
+				border-radius: 1000px;
+				width: 6rem;
+				height: 6rem;
+				overflow: hidden;
+				margin-bottom: 1rem;
+
+				img {
+					width: 5.6rem;
+					height: 5.6rem;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+
+			&__info {
+				@include flexbox($direction: column)
+			}
+
+			&__isVerified {
+				position: absolute;
+				top: 50%;
+				right: -2rem;
+				transform: translateY(-50%);
+				font-size: 0.75em;
+			}
+		}
+	}
+}

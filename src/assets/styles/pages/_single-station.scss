@@ -1,0 +1,90 @@
+.station {
+
+	&__price-table {
+
+		@include media-max(400px) {
+			width: 85%;
+		}
+
+		thead,
+		tbody {
+
+			td:not(:first-child):not(:last-child) {
+				padding: 0.5rem 1.75rem;
+			}
+
+			td:nth-child(2) {
+				text-align: center;
+			}
+
+			td:last-child {
+				text-align: right;
+			}
+
+		}
+
+		thead {
+			border-bottom: 2px solid $grey-lighten-4;
+			// font-size: 0.875rem;
+			font-weight: 500;
+			letter-spacing: 0;
+		}
+
+		.fa-question-circle {
+			position: absolute;
+			top: 11px;
+			right: -28px;
+		}
+	}
+
+	&__reviews {
+
+		.reviewer {
+
+			&__wrapper {
+				margin-bottom: 1.5rem;
+
+				&:not(:last-child) {
+					border-bottom: 1px solid $grey-lighten-4;
+				}
+			}
+
+			&__image {
+				border: none;
+				border-radius: 50%;
+				width: 36px;
+				height: 36px;
+			}
+
+			&__reply-time {
+				font-size: 12px;
+				font-weight: 600;
+				margin-left: .25rem;
+				position: relative;
+				top: 3px;
+				color: $grey-darken-2;
+			}
+
+			&__review {
+				padding-left: 2.5rem;
+				margin-top: .875rem;
+
+				a {
+					font-size: 0.875rem;
+					font-weight: 500;
+				}
+
+				i {
+					font-size: .1rem;
+					vertical-align: middle;
+					margin: 0 .875rem;
+					color: $grey-lighten-3;
+				}
+			}
+
+			&__comment {
+				max-width: calc(540px - 2.5rem);
+			}
+		}
+	}
+}

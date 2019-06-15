@@ -1,0 +1,94 @@
+.btn {
+	@include flexbox($display: inline-flex);
+	font-weight: 500;
+	font-size: 0.875rem;
+	letter-spacing: -0.006em;
+	color: $red-darken-1;
+	user-select: none;
+	vertical-align: middle;
+	background-color: mix($red-base, white, 5%);
+	border: 2px solid $red-base;
+	margin: -1px;
+	height: 45px;
+	min-width: 45px;
+	border-radius: 3px;
+	transition:
+		color $transition,
+		background-color $transition,
+		border-color $transition,
+		box-shadow $transition;
+
+	@include media-max {
+		font-size: .9375rem‬;
+	}
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $red-base;
+		border-color: $red-base;
+	}
+
+	&.focus,
+	&:focus,
+	&:not(:disabled):not(.disabled).active:focus,
+	&:not(:disabled):not(.disabled):active:focus,
+	.show>&.dropdown-toggle:focus {
+		box-shadow: none;
+		color: #fff;
+	}
+
+	&:not(:disabled):not(.disabled).active,
+	&:not(:disabled):not(.disabled):active,
+	.show>&.dropdown-toggle {
+		color: #fff;
+		background-color: $red-darken-1;
+		border-color: $red-darken-1;
+	}
+
+	@each $color, $variant in $theme-colors {
+
+		&.btn-#{$color} {
+			color: darken($variant, 4%);
+			background-color: mix($variant, white, 5%);
+			border: 2px solid $variant;
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: $variant;
+				border-color: $variant;
+			}
+
+			&:not(:disabled):not(.disabled).active,
+			&:not(:disabled):not(.disabled):active,
+			.show>&.dropdown-toggle {
+				color: #fff;
+				background-color: darken($variant, 3.5%);
+				border-color: darken($variant, 3.5%);
+			}
+		}
+	}
+
+	&.btn-gradient {
+		color: white !important;
+		font-size: 0.875rem;
+		background-image: linear-gradient(
+				to bottom left,
+				$orange-base,
+				$red-base 70%
+			);
+		border: none;
+		will-change: box-shadow;
+		transition: box-shadow $transition;
+	}
+
+	&.borderless  {
+		border-width: 0 !important;
+		font-weight: 600;
+	}
+
+	&:disabled {
+		filter: grayscale(50%);
+		cursor: not-allowed;
+	}
+}

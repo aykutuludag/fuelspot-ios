@@ -1,0 +1,30 @@
+.news--single {
+
+	&__image {
+		object-fit: cover;
+		object-position: center;
+		border-radius: 3px;
+	}
+
+	&__date {
+		font-size: 0.875rem;
+	}
+
+	&__content {
+		margin-top: 40px;
+	}
+
+	&__share {
+
+		b {
+			font-weight: 500;
+			font-size: 1.125rem;
+		}
+
+		&>i {
+			font-weight: 900;
+			font-size: 1rem;
+			margin-right: .5rem;
+		}
+	}
+}

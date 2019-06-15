@@ -1,0 +1,61 @@
+.table {
+
+	// &__head {}
+
+	// &__body {}
+
+	&__data {
+		padding: 0.5rem !important;
+
+		.table__head & {
+			font-size: 0.875rem;
+			border-top: 0;
+			color: $blue-grey-base;
+
+			&--left {
+				color: inherit;
+
+				.table--basis &,
+				.table--tax & {
+					width: 50%;
+				}
+			}
+
+			&--right {
+				color: inherit;
+
+				.table--basis &,
+				.table--tax & {
+					width: 50%;
+				}
+			}
+		}
+
+		.table__body & {
+			// font-size: 0.875rem;
+
+			&--left {
+				color: inherit;
+
+				.table--basis &,
+				.table--tax & {
+					width: 50%;
+				}
+			}
+
+			&--right {
+				color: inherit;
+
+				.table--basis &,
+				.table--tax & {
+					width: 50%;
+					// font-size: 0.875rem;
+				}
+			}
+		}
+	}
+
+	&-bordered {
+		border-width: 2px;
+	}
+}

@@ -1,0 +1,26 @@
+.tippy {
+	&-popper {
+		max-width: 240px;
+		perspective: 700px;
+		z-index: 999;
+		outline: 0;
+		transition-timing-function: cubic-bezier(.165, .84, .44, 1);
+		pointer-events: none;
+		line-height: 1.4;
+	}
+
+	&-tooltip {
+		position: relative;
+		color: #fff;
+		border-radius: 4px;
+		font-size: .875rem;
+		padding: .3rem .6rem;
+		text-align: center;
+		will-change: transform;
+		background-color: #333;
+	}
+
+	&-content {
+		color: $yellow-base;
+	}
+}

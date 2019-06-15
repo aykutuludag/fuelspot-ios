@@ -1,0 +1,59 @@
+.social-sharing {
+	@include flexbox($justify: flex-start);
+
+	a {
+		font-size: 14px;
+		font-weight: 500;
+		padding: 0.5rem 0.75rem;
+		border: 1px solid $blue-grey-lighten-4;
+		border-radius: 3px;
+		color: $blue-grey-lighten-2;
+		margin-top: 1rem;
+		@include flexbox($justify: flex-start);
+		will-change: background;
+		transition: background $transition;
+
+		&:not(:last-child) {
+			margin-right: 1.25rem;
+		}
+
+		&:hover {
+			background: #fafafa;
+		}
+
+		i {
+			margin-right: 0.25rem;
+			font-size: 1.125rem;
+		}
+
+		&[data-link="#share-facebook"] {
+			i {
+				color: #3b5998;
+			}
+		}
+
+		&[data-link="#share-twitter"] {
+			i {
+				color: #1da1f2;
+			}
+		}
+
+		&[data-link="#share-linkedin"] {
+			i {
+				color: #0077b5;
+			}
+		}
+
+		&[data-link="#share-telegram"] {
+			i {
+				color: #0088cc;
+			}
+		}
+
+		&[data-action="share/whatsapp/share"] {
+			i {
+				color: #128c7e;
+			}
+		}
+	}
+}

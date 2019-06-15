@@ -1,0 +1,76 @@
+.checkbox {
+	position: relative;
+
+	&__label {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	&__input {
+		@extend .visuallyhidden;
+	}
+
+	&__box {
+		display: block;
+		position: relative;
+		width: 16px;
+		height: 16px;
+		overflow: hidden;
+		transition: $transition;
+		align-self: flex-start;
+		margin: 0;
+		margin-top: 7px;
+		flex-shrink: 0;
+		border: 2px solid #cfd8dc;
+		border-radius: 2px;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			transition: $transition;
+			top: 0;
+			left: 0;
+			width: 12px;
+			height: 12px;
+			opacity: 0;
+			background: url("data:image/svg+xml;utf8, \
+                    %3Csvg width='12px' height='12px' viewBox='0 0 12 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E \
+                        %3Cpolyline stroke='%23#{rgba($red-base, .99)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none' points='3 6 5 8 9 4'%3E%3C/polyline%3E \
+                    %3C/svg%3E") no-repeat 0 0;
+		}
+	}
+
+	input~.checkbox__label:hover,
+	input:focus~.checkbox__label {
+		.checkbox__box {
+			border-color: $red-base;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	input:checked~.checkbox__label {
+		.checkbox__box {
+			border-color: $red-base;
+			background: $red-base;
+
+			&::before {
+				background: url("data:image/svg+xml;utf8,%3Csvg width='12px' height='12px' viewBox='0 0 12 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3Cpolyline stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none' points='3 6 5 8 9 4'%3E%3C/polyline%3E%3C/svg%3E") no-repeat 0 0;
+				opacity: 1;
+			}
+		}
+
+		.checkbox__slot {
+			color: $red-base;
+		}
+	}
+
+	.checkbox__slot {
+		margin: 4px 0 4px 0.5rem;
+	}
+}

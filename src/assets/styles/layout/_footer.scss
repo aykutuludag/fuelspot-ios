@@ -1,0 +1,22 @@
+.footer {
+
+	&--settings {
+
+		[class*="col-"] {
+
+			@include media-min {
+
+				&:first-child {
+					padding-left: 0;
+					padding-right: 30px;
+				}
+
+				&:last-child {
+					padding-left: 30px;
+					padding-right: 0;
+				}
+			}
+
+		}
+	}
+}

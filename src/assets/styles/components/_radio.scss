@@ -1,0 +1,138 @@
+.radio {
+	@include flexbox($direction: column, $align: flex-start);
+	margin: 0 24px 0 0;
+
+	&__input {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+		box-sizing: border-box;
+		padding: 0;
+
+		&:checked~.radio__label {
+
+			.radio__circle {
+				background: $red-base;
+				border: solid 2px $red-base;
+
+				&::before {
+					background: white;
+					opacity: 1;
+				}
+			}
+
+			.radio__label__text {
+				color: $red-base;
+			}
+		}
+	}
+
+	&__label {
+		@include flexbox();
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+
+		&:hover .radio__circle {
+			border: solid 2px $red-base;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	.radio__circle {
+		border: solid 2px $blue-grey-lighten-4;
+		border-radius: 100%;
+		display: block;
+		position: relative;
+		width: 16px;
+		height: 16px;
+		overflow: hidden;
+		cursor: pointer;
+		transition: $transition;
+		// margin: 8px 0;
+		flex-shrink: 0;
+
+		&:before {
+			display: block;
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 50%;
+			background: $red-base;
+			opacity: 0;
+			border-radius: 100%;
+			width: 6px;
+			height: 6px;
+			margin: -3px 0 0 -3px;
+			transition: $transition;
+		}
+
+		&:hover {
+			border: solid 2px $red-base;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	.radio__label__text {
+		margin: 4px 0 4px 8px;
+	}
+}
+
+@each $color,
+$variant in $theme-colors {
+
+	.radio-#{$color} {
+
+		.radio__input {
+
+			&:checked~.radio__label .radio__circle {
+				background: $variant;
+				border: solid 2px $variant;
+
+				&::before {
+					background: white;
+				}
+			}
+
+			&:checked~.radio__label .radio-label__text {
+				color: $variant;
+			}
+		}
+
+		.radio__label {
+
+			&:hover .radio__circle {
+				border: solid 2px $variant !important;
+			}
+		}
+
+		.radio__circle {
+
+			&:before {
+				background: $variant;
+			}
+
+			&:hover {
+				border: solid 2px $variant;
+			}
+		}
+	}
+}
+
+.radio-group {
+
+	&.inline {
+		@include flexbox($justify: flex-start);
+	}
+}

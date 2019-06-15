@@ -1,0 +1,16 @@
+a {
+	cursor: pointer;
+	color: $blue-base;
+	text-transform: unset !important;
+
+	&:hover {
+		text-decoration: none !important;
+		color: $blue-darken-1;
+	}
+
+	&:focus {
+		box-shadow: none;
+		outline: 1px solid $blue-base;
+		outline-offset: 1px;
+	}
+}

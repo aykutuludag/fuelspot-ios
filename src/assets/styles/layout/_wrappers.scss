@@ -1,0 +1,28 @@
+.main-wrapper {
+	margin-top: 120px;
+	padding-bottom: 64px;
+}
+
+.wrapper-240 {
+	@include mx-auto($max-width: 240px);
+}
+
+.wrapper-320 {
+	@include mx-auto($max-width: 360px);
+}
+
+.wrapper-480 {
+	@include mx-auto($max-width: 480px);
+}
+
+.wrapper-560 {
+	@include mx-auto($max-width: 560px);
+}
+
+.wrapper-640 {
+	@include mx-auto($max-width: 640px);
+}
+
+.wrapper-720 {
+	@include mx-auto($max-width: 720px);
+}

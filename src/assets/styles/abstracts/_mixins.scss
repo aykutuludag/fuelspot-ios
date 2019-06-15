@@ -1,0 +1,43 @@
+
+// Media Query Mixins
+@mixin media-min($breakpoint: $md) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-max($breakpoint: $md) {
+  @media (max-width: $breakpoint - 0.02px) {
+    @content;
+  }
+}
+
+@mixin media-and($min, $max) {
+  @media (min-width: $min) and (max-width: $max - 0.02px) {
+    @content;
+  }
+}
+
+@mixin mx-auto($width: null, $min-width: null, $max-width: null) {
+    width: $width;
+    min-width: $min-width;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Flexbox Mixin
+@mixin flexbox($display: flex, $direction: row, $align: center, $justify: center, $wrap: wrap) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+@mixin mm-scale($width: null, $height: null) {
+	min-width: $width !important;
+	min-height: $height !important;
+	max-width: $width !important;
+	max-height: $height !important;
+}

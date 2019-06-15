@@ -1,0 +1,31 @@
+.facilities__list {
+	padding-left: 0;
+	list-style-type: none;
+
+	&__item {
+		padding-left: 1.25rem;
+		position: relative;
+		display: inline-block;
+
+		&::before {
+			display: inline-block;
+			font-size: 14px;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			font-family: "Font Awesome 5 Pro";
+			font-weight: 400;
+			position: absolute;
+			content: "\f058";
+			color: $green-base;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		&:not(:last-child) {
+			margin-right: 1.25rem;
+		}
+	}
+}

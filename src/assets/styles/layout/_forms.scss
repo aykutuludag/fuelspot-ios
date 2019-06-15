@@ -1,0 +1,71 @@
+.form {
+
+	&__heading {
+		font-size: 24px;
+		color: $blue-grey-darken-3;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.form__label {
+		font-weight: 500;
+		color: $blue-grey-base;
+	}
+
+	.form-control {
+		height: 45px;
+		border-width: 2px;
+		border-color: $blue-grey-lighten-4;
+
+		&:hover {
+			border-color: $blue-grey-lighten-3;
+		}
+
+		&:focus {
+			box-shadow: none;
+			border-color: $blue-base;
+		}
+
+		&[type="file"] {
+			position: relative;
+			cursor: pointer;
+			font-family: $font-sans;
+
+			&::-webkit-file-upload-button {
+				height: 42px;
+				margin-top: calc(-0.375rem);
+				margin-bottom: calc(-0.375rem);
+				margin-left: -14px;
+				padding-left: 8px;
+				font-size: 14px;
+				font-weight: 500;
+				left: 0;
+				border: none;
+				color: $blue-grey-base;
+				background-color: #fcfcfc;
+				border-right: 2px solid $blue-grey-lighten-4;
+				user-select: none;
+
+				&:focus {
+					border-color: $blue-grey-lighten-4;
+				}
+			}
+		}
+	}
+
+	textarea.form-control {
+		height: auto !important;
+	}
+
+	&--profile-edit {
+
+		.form__label {
+			display: block;
+		}
+
+		[class*="col-"] {
+			margin-top: 1rem;
+		}
+	}
+}
